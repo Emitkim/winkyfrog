@@ -67,8 +67,10 @@
     </style>
 </head>
 <body>
+
+    
     <div class="image-container">
-        <img src="./images/background1.jpg" alt="Fit Image"> <!-- Replace with your image file path -->
+        <img id="backgroundImage" alt="Fit Image"> <!-- Replace with your image file path -->
         <div class="text-box">
             <img class="logo" src="./images/logotransparent.png" alt="Logo"> <!-- Replace with your logo file path -->
             <div class="text-content">
@@ -79,5 +81,21 @@
             </div>
         </div>
     </div>
+
+<script>
+        // Array of image URLs
+        var images = [
+            "./images/background1.jpg",
+            "./images/background2.jpg",
+            "./images/background3.jpg"
+        ];
+
+        // Randomly select an image
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var selectedImage = images[randomIndex];
+
+        // Set the initial background image
+        document.getElementById("backgroundImage").src = selectedImage;
+    </script>
 </body>
 </html>
